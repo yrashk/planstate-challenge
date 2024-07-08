@@ -16,7 +16,7 @@ don't need to keep reintegrating changes from the upstream. This allows our
 users to add Omnigres functionality to their vanilla Postgres installations.
 
 This challenge is designed for both newcomers to Postgres extension building as
-those who've done a lot of Postgres internals hacking.
+well as those who've done a lot of Postgres internals hacking.
 
 In this project, we'll touch on [Postgres
 executor](https://github.com/postgres/postgres/blob/master/src/backend/executor/README)

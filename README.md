@@ -42,7 +42,7 @@ find it in the C file in this repository. Your job is to pass an individual augm
 to every `PlanState`, log it there and call the original callback for the `PlanState`, without
 too much of performance overhead.
 
-Effectively, in this exercise we want to provide the PlanState an additional
+Ultimately, in this exercise we want to provide the PlanState an additional
 context. Howver, since we cannot change Postges' data structures or its internal
 API, we need to implement a form of augmentation. The effect is we want is for
 each `PlanState` execution to run as if it was executed with the signature of

@@ -3,6 +3,7 @@
 #include <c.h>
 #include <executor/executor.h>
 #include <nodes/nodeFuncs.h>
+#include <miscadmin.h>
 
 PG_MODULE_MAGIC;
 
@@ -58,8 +59,10 @@ static void planstatech_executor_run_hook(QueryDesc *queryDesc,
 }
 
 void _PG_init(void) {
-  if (ExecutorRun_hook != NULL) {
-    old_ExecutorRun_hook = ExecutorRun_hook;
+  if (!IsUnderPostmaster) {
+    if (ExecutorRun_hook != NULL) {
+      old_ExecutorRun_hook = ExecutorRun_hook;
+    }
+    ExecutorRun_hook = planstatech_executor_run_hook;
   }
-  ExecutorRun_hook = planstatech_executor_run_hook;
 }

@@ -41,7 +41,7 @@ static bool walker(struct PlanState *pstate, void *context) {
 
   // TODO: how do we pass the augmentation?
 
-  return false;
+  return planstate_tree_walker(pstate, walker, NULL);
 }
 
 

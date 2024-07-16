@@ -48,9 +48,7 @@ static bool walker(struct PlanState *pstate, void *context) {
 
 static void planstatech_executor_run_hook(QueryDesc *queryDesc,
     ScanDirection direction, uint64 count, bool execute_once) {
-  if (queryDesc->planstate != NULL) {
-    walker(queryDesc->planstate, NULL);
-  }
+  walker(queryDesc->planstate, NULL);
   if (old_ExecutorRun_hook != NULL) {
     old_ExecutorRun_hook(queryDesc, direction, count, execute_once);
   } else {

@@ -43,7 +43,7 @@ to every `PlanState`, log it there and call the original callback for the `PlanS
 too much of performance overhead.
 
 Ultimately, in this exercise we want to provide the PlanState an additional
-context. Howver, since we cannot change Postges' data structures or its internal
+context. However, since we cannot change Postges' data structures or its internal
 API, we need to implement a form of augmentation. The effect is we want is for
 each `PlanState` execution to run as if it was executed with the signature of
 `planstate->ExecProcNodeReal(PlanState *, additional_context)` instead of

@@ -6,7 +6,7 @@ we'd like you to take a stab at this project. It will help you see some of the
 kinds of challenges we run into; and it will help us understand how you solve
 them.
 
-Please keep your solution private. This is to prevent spoilers and make it more
+**Please keep your solution private**. This is to prevent spoilers and make it more
 fun for others!
 
 # The Project
